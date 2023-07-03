@@ -3,9 +3,9 @@ const express = require('express');
 const mongoose=require('mongoose');
 var cors=require('cors');
 const app = express();
-const url = 'mongodb://mongonode/AlienDBex'
+//const url = 'mongodb://mongonode/AlienDBex'
 // const url = 'mongodb://0.0.0.0/AlienDBex'
-// const url = 'mongodb://127.0.0.1/AlienDBex'
+ const url = 'mongodb://127.0.0.1/AlienDBex'
 // 
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
