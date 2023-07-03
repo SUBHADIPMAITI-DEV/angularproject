@@ -1,0 +1,44 @@
+/* .example-container{
+    margin-left: 40%;
+}
+
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+.container{
+    margin: auto;
+} */
+
+/* .card{
+  width: 40%;
+  align-items: center;
+} */
+
+.center {
+  position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    /* background: red; */
+}
+
+.card-body{
+  align-items: center ;
+}

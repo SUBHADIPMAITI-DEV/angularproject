@@ -1,0 +1,125 @@
+<app-navber></app-navber>
+<!-- <div class="container-fluid" style="border: 1px solid"> -->
+    
+    <!-- <p>Test</p> -->
+      <div class="example-sidenav-content mt-3" fxLayout="row wrap"  fxLayout.xs="column" fxLayoutAlign="space-evenly center">
+        <ng-container *ngIf="!isEdit" class="overflow-auto">
+          <mat-card
+            class="example-card"
+            *ngFor="
+              let emp of empArray | paginate : { itemsPerPage: 10, currentPage: p };
+              let i = index
+            "
+          >
+            <mat-card-header >
+              <div mat-card-avatar class="example-header-image"fxLayoutAlign.xs="center center"></div>
+              <mat-card-title>{{ emp.name }}</mat-card-title>
+              <mat-card-subtitle>{{ emp.position }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{ emp.about }}
+              </p>
+              <p>{{ emp.joining_data | date : "yyyy-MM-dd " }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a (click)="getEmployee(emp._id)"><button mat-button>Edit</button></a>
+        
+              <a (click)="deleteEmployee(emp._id)"
+                ><button mat-button>Delete</button></a
+              >
+            </mat-card-actions>
+          </mat-card>
+        </ng-container>
+       
+      </div>
+
+<div class="container mt-3" *ngIf="isEdit">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-title">
+          <h3 class="text-center mt-2"><b>Edit Employee</b></h3>
+          <hr />
+        </div>
+        <div class="card-body">
+          <form
+            [formGroup]="employeeForm"
+            (ngSubmit)="onSubmit()"
+            class="form-horizontal needs-validation"
+            novalidate
+          >
+            <fieldset>
+              <div class="mb-3">
+                <label for="name" class="form-label" aria-required="true"
+                  >Name
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter The Name"
+                  required="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  placeholder="Enter the  Email"
+                  required="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="position"
+                  formControlName="position"
+                  placeholder="Enter the Position"
+                  required="position"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="about" class="form-label">About</label>
+                <textarea
+                  class="form-control"
+                  id="about"
+                  formControlName="about"
+                  placeholder="About section"
+                  rows="2"
+                  required="about"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <!-- <label for="position" class="form-label">Joining Date</label> -->
+                <label for="position" class="form-label">Joining Date</label>
+                <br />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  formControlName="joining_data"
+                  required="joining_data"
+                />
+              </div>
+              <button type="submit">submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blockquote-footer" *ngIf="!isEdit">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<app-footer></app-footer>

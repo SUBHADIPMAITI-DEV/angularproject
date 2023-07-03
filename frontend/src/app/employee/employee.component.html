@@ -1,0 +1,154 @@
+<app-navber></app-navber>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-title">
+          <h3 class="text-center mt-2"><b>Create Employee</b></h3>
+          <hr />
+        </div>
+
+        <div class="card-body">
+          <form
+            [formGroup]="employeeForm"
+            (ngSubmit)="onSubmit()"
+            class="form-horizontal needs-validation"
+            novalidate
+          >
+            <fieldset>
+              <div class="mb-3">
+                <label
+                  for="name"
+                  class="form-label"
+                  aria-required="true"
+                  for="name"
+                  >Name<span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                
+                  formControlName="name"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter The Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Email<span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  placeholder="Enter the  Email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="position" class="form-label"
+                  >Position<span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="position"
+                  formControlName="position"
+                  placeholder="Enter the Position"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="about" class="form-label"
+                  >About<span class="required">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="about"
+                  formControlName="about"
+                  placeholder="About section"
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="position" class="form-label"
+                  >Joining Date<span class="required">*</span></label
+                >
+                <br />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  formControlName="joining_data"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-title">
+          <h3 class="text-center mt-2"><b>Show Employee</b></h3>
+          <hr />
+        </div>
+        <div class="card-body mt-2 overflow-auto">
+          <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Position</th>
+                <th scope="col">About</th>
+                <th scope="col">Joining_data</th>
+                <th scope="col">More</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let emp of empArray
+                    | filter : _employeeService.getFilter()
+                    | paginate : { itemsPerPage: 6, currentPage: p };
+                  let i = index
+                "
+              >
+                <td>{{ i + 1 }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.email }}</td>
+
+                <td>{{ emp.position }}</td>
+                <td>{{ emp.about }}</td>
+                <td>{{ emp.joining_data | date : "yyyy-MM-dd "}}</td>
+
+                <td>
+                  <span class="d-flex">
+                    <i
+                      class="fas fa-pencil-alt pointer-cursor"
+                      (click)="getEmployee(emp._id, 'Update')"
+                    ></i>
+                    &nbsp; &nbsp;
+                    <i
+                      class="fas fa-trash pointer-cursor"
+                      (click)="deleteEmployee(emp._id)"
+                    ></i>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="blockquote-footer">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

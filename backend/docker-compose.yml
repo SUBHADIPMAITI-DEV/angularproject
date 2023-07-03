@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  dockerexpress:
+    image: dockerexpress
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+      -  /app/node_modules  
+    environment:
+      - PORT=3000 
+    command: npm start 
+    depends_on:
+      - mongonode
+
+  mongonode:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo:/data/db
+    ports:
+      - 27017:27017    
+
+volumes:
+  mongo:     

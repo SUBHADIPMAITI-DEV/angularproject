@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <img id="logo" src="../../assets/logo-removebg-preview.png" alt="" srcset="">
+    <a class="navbar-brand" href="#">RapidKen.AI</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/employee"
+            >Add Employee</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/show"
+            >Show Employee Card View</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          (input)="searchEmp($event)"
+        />
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+      </form>
+      <br />
+    </div>
+  </div>
+  <ul id="login" class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        aria-current="page"
+        routerLink="/login"
+        *ngIf="!isToken"
+        >Login</a
+      >
+    </li>
+    <br />
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        role="button"
+        aria-current="page"
+        (click)="logout()"
+        *ngIf="isToken"
+        >Logout</a
+      >
+    </li>
+  </ul>
+</nav>

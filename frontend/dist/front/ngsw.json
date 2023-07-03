@@ -1,0 +1,136 @@
+{
+  "configVersion": 1,
+  "timestamp": 1678457337533,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.6c844e414780dbd5.js",
+        "/manifest.webmanifest",
+        "/polyfills.04763a7356455a6c.js",
+        "/runtime.fe4e7fcdaa3333a6.js",
+        "/styles.5e82c8be968748b3.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/FontAwesome/css/SeekPng.com_login-icon-png_1388103-removebg-preview.png",
+        "/assets/FontAwesome/css/all.min.css",
+        "/assets/FontAwesome/logo-removebg-preview.png",
+        "/assets/FontAwesome/webfonts/fa-brands-400.eot",
+        "/assets/FontAwesome/webfonts/fa-brands-400.svg",
+        "/assets/FontAwesome/webfonts/fa-brands-400.ttf",
+        "/assets/FontAwesome/webfonts/fa-brands-400.woff",
+        "/assets/FontAwesome/webfonts/fa-brands-400.woff2",
+        "/assets/FontAwesome/webfonts/fa-regular-400.eot",
+        "/assets/FontAwesome/webfonts/fa-regular-400.svg",
+        "/assets/FontAwesome/webfonts/fa-regular-400.ttf",
+        "/assets/FontAwesome/webfonts/fa-regular-400.woff",
+        "/assets/FontAwesome/webfonts/fa-regular-400.woff2",
+        "/assets/FontAwesome/webfonts/fa-solid-900.eot",
+        "/assets/FontAwesome/webfonts/fa-solid-900.svg",
+        "/assets/FontAwesome/webfonts/fa-solid-900.ttf",
+        "/assets/FontAwesome/webfonts/fa-solid-900.woff",
+        "/assets/FontAwesome/webfonts/fa-solid-900.woff2",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/logo-removebg-preview.png",
+        "/assets/logo.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-call",
+      "patterns": [
+        "http:\\/\\/localhost:3000\\/[^/]*"
+      ],
+      "strategy": "performance",
+      "maxSize": 10,
+      "maxAge": 43200000,
+      "timeoutMs": 0,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/FontAwesome/css/SeekPng.com_login-icon-png_1388103-removebg-preview.png": "39921db36106deede12d0a9a9a53f6440dbd74a5",
+    "/assets/FontAwesome/css/all.min.css": "8bd508bb2f120487671bce49267f7ac8a2eff154",
+    "/assets/FontAwesome/logo-removebg-preview.png": "7b7238ad2bc549c6e3cbfdab3d98bb29009672a0",
+    "/assets/FontAwesome/webfonts/fa-brands-400.eot": "d1ffd6340cdbf72890ccb67f32015eafc5df51a7",
+    "/assets/FontAwesome/webfonts/fa-brands-400.svg": "b7fd3035e83c23c720c9f5957af31d7e288fb4eb",
+    "/assets/FontAwesome/webfonts/fa-brands-400.ttf": "8ab907083fecaaa2a9ec93b27f884ad74573705c",
+    "/assets/FontAwesome/webfonts/fa-brands-400.woff": "1e1f02bfa89e179fe2dd1383273b8812aa873418",
+    "/assets/FontAwesome/webfonts/fa-brands-400.woff2": "0613c7ebba55ee47ef302c0f7766324692f899a7",
+    "/assets/FontAwesome/webfonts/fa-regular-400.eot": "670fb01e4930ae46fe8d6d2b75ead288f54e8e61",
+    "/assets/FontAwesome/webfonts/fa-regular-400.svg": "229deca2465fa9efc8c03d0ebeb9a01c1559822e",
+    "/assets/FontAwesome/webfonts/fa-regular-400.ttf": "c34acd6818df6db6be41a2e331886765d601f2eb",
+    "/assets/FontAwesome/webfonts/fa-regular-400.woff": "3ad4f4e4b1fb3edee3d4ba25e6cdfed2f0b88a54",
+    "/assets/FontAwesome/webfonts/fa-regular-400.woff2": "13517529affa39e2585c591acae6dc336b6aa917",
+    "/assets/FontAwesome/webfonts/fa-solid-900.eot": "ea845c59bee4a5c6db774b8d8060f5641b789ae9",
+    "/assets/FontAwesome/webfonts/fa-solid-900.svg": "023bb481b65dd8cdeb8c424ca900f3866292bfb0",
+    "/assets/FontAwesome/webfonts/fa-solid-900.ttf": "eb8914f6b1797b45ee0883e6089d92695d9f9441",
+    "/assets/FontAwesome/webfonts/fa-solid-900.woff": "a22acd7697f36e7d4cc31a853c70e776eac54bb1",
+    "/assets/FontAwesome/webfonts/fa-solid-900.woff2": "0ccb2c814a7e4ca12c4778821633809cb0361eaa",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/logo-removebg-preview.png": "7b7238ad2bc549c6e3cbfdab3d98bb29009672a0",
+    "/assets/logo.png": "ab8dbd45e54f2bb65e720979b53bee3f17fd6fab",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "8605f65d1a719a003a2cf7a7c205974a21096671",
+    "/main.6c844e414780dbd5.js": "0dafda48dd199c0f5258ee7e0450562f40352d32",
+    "/manifest.webmanifest": "4a17033d41b19f97cc660c6a603fdc95226d1704",
+    "/polyfills.04763a7356455a6c.js": "d68663b69fc60d595a4532881635b23fa5ecde17",
+    "/runtime.fe4e7fcdaa3333a6.js": "18b4fba29d327241c9a0554d9ca3b3c608e50952",
+    "/styles.5e82c8be968748b3.css": "396388a01e5fa9bc223b182a7b85fdf2cbdeb865"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

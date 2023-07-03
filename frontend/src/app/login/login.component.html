@@ -1,0 +1,38 @@
+<div class="card center border-0">
+  <div class="card-head text-center display-6" style="color: #ec52cc">
+    Login
+  </div>
+  <div class="card-body ps-5">
+    <form [formGroup]="authForm">
+      <div class="mb-3">
+        <label for="username" class="form-label" aria-required="true"
+          >Enter The UserName
+        </label>
+        <br />
+        <input
+          type="text"
+          class="form-control-sm"
+          id="username"
+          formControlName="username"
+          aria-describedby="emailHelp"
+          placeholder="Enter The UserName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Enter password</label>
+        <br />
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control-sm"
+          id="password"
+          placeholder="Enter the  Password"
+        />
+      </div>
+      <span class="text-dengar">{{ errorMessage }}</span>
+      <button type="button" class="btn btn-primary mx-5" (click)="createUser()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

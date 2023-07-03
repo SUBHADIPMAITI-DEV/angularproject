@@ -1,0 +1,87 @@
+<app-navber></app-navber>
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  Add New
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Add Employee</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label" aria-required="true"
+              >Enter The Name
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              placeholder="Enter The Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Enter The Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter the  Email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="position" class="form-label">Enter Position</label>
+            <input
+              type="text"
+              class="form-control"
+              id="position"
+              placeholder="Enter the Position"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="about" class="form-label">About</label>
+            <input
+              type="text"
+              class="form-control"
+              id="about"
+              placeholder="About section"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="position" class="form-label">Joining Date</label>
+            <input type="date" class="form-control" id="date" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
